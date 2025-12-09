@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE - MatheZoo Design: Gelb/Orange Basis mit Bereichs-Farben */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  /* GELB/ORANGE BASIS */
+  --background: 45 95% 97%;
+  --foreground: 25 30% 15%;
+  --border: 45 80% 82%;
+  --card: 45 90% 96%;
+  --card-foreground: 25 30% 15%;
+  --card-border: 45 75% 85%;
+
+  --sidebar: 45 85% 93%;
+  --sidebar-foreground: 25 30% 20%;
+  --sidebar-border: 45 75% 84%;
+  --sidebar-primary: 25 85% 58%;
+  --sidebar-primary-foreground: 45 100% 98%;
+  --sidebar-accent: 45 100% 86%;
+  --sidebar-accent-foreground: 25 40% 25%;
+  --sidebar-ring: 25 85% 58%;
+
+  --popover: 45 85% 93%;
+  --popover-foreground: 25 30% 20%;
+  --popover-border: 45 75% 84%;
+
+  /* PRIMARY: ORANGE (Zentral) */
+  --primary: 25 85% 58%;
+  --primary-foreground: 45 100% 98%;
+
+  /* SECONDARY: GELB (Unterstützung) */
+  --secondary: 45 95% 68%;
+  --secondary-foreground: 25 40% 25%;
+
+  --muted: 45 70% 88%;
+  --muted-foreground: 25 25% 40%;
+
+  /* ACCENT: ORANGE (Highlights) */
+  --accent: 25 90% 62%;
+  --accent-foreground: 25 95% 12%;
+
+  --destructive: 350 80% 62%;
+  --destructive-foreground: 350 85% 12%;
+
+  --input: 45 70% 80%;
+  --ring: 25 85% 68%;
+  
+  /* BEREICHS-FARBEN FÜR NAVIGATION */
+  --training-color: 200 80% 52%;     /* Blau - Fokus & Konzentration */
+  --zoo-color: 145 75% 48%;          /* Grün - Natur & Spiel */
+  --shop-color: 25 90% 60%;          /* Orange - Wertvolle Items */
+  --partners-color: 270 70% 58%;     /* Lila - Vernetzung & Ziele */
+  --goals-color: 350 80% 62%;        /* Rot - Wichtige Ziele */
+  --chart-1: 25 85% 68%;
+  --chart-2: 45 95% 65%;
+  --chart-3: 200 80% 72%;
+  --chart-4: 145 75% 65%;
+  --chart-5: 270 70% 75%;
+
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  
+  /* Mathematical Learning Colors - Adapted for Gelb/Orange */
+  --tens-zone: 350 85% 62%;
+  --tens-zone-foreground: 350 75% 12%;
+  --tens-zone-border: 350 75% 52%;
+  
+  --ones-zone: 200 80% 52%;
+  --ones-zone-foreground: 200 85% 12%;
+  --ones-zone-border: 200 75% 42%;
+  
+  --discovery: 25 95% 58%;
+  --discovery-foreground: 25 85% 12%;
+  --discovery-border: 25 85% 48%;
+  
+  --achievement: 45 95% 58%;
+  --achievement-foreground: 45 90% 12%;
+  --achievement-border: 45 90% 48%;
+  
+  --learning-teal: 175 80% 42%;
+  --learning-teal-foreground: 175 85% 8%;
+  --learning-teal-border: 175 75% 32%;
+  
+  --warning: 25 95% 58%;
+  --warning-foreground: 25 90% 12%;
+  --warning-border: 25 90% 48%;
+  --radius: .75rem;
+  --shadow-2xs: 0px 1px 2px 0px hsl(25 40% 60% / 0.08);
+  --shadow-xs: 0px 1px 3px 0px hsl(25 40% 60% / 0.10);
+  --shadow-sm: 0px 2px 4px -1px hsl(25 40% 60% / 0.12), 0px 1px 2px -1px hsl(25 40% 60% / 0.08);
+  --shadow: 0px 4px 6px -2px hsl(25 40% 60% / 0.14), 0px 2px 4px -1px hsl(25 40% 60% / 0.10);
+  --shadow-md: 0px 6px 8px -2px hsl(25 40% 60% / 0.16), 0px 3px 6px -2px hsl(25 40% 60% / 0.12);
+  --shadow-lg: 0px 10px 15px -3px hsl(25 40% 60% / 0.18), 0px 4px 8px -2px hsl(25 40% 60% / 0.14);
+  --shadow-xl: 0px 20px 25px -5px hsl(25 40% 60% / 0.20), 0px 8px 12px -4px hsl(25 40% 60% / 0.16);
+  --shadow-2xl: 0px 25px 50px -12px hsl(25 40% 60% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255, 255, 255, .10);
+  --badge-outline: rgba(255, 255, 255, .05);
+  --elevate-1: rgba(255, 255, 255, .03);
+  --elevate-2: rgba(255, 255, 255, .08);
+
+  --background: 25 20% 12%;
+  --foreground: 45 95% 97%;
+  --border: 25 30% 20%;
+  --card: 25 30% 20%;
+  --card-foreground: 45 95% 97%;
+  --card-border: 25 30% 30%;
+  --sidebar: 25 25% 18%;
+  --sidebar-foreground: 45 95% 97%;
+  --sidebar-border: 25 30% 28%;
+  --sidebar-primary: 25 85% 65%;
+  --sidebar-primary-foreground: 25 20% 12%;
+  --sidebar-accent: 25 50% 35%;
+  --sidebar-accent-foreground: 45 95% 97%;
+  --sidebar-ring: 25 85% 65%;
+  --popover: 25 25% 18%;
+  --popover-foreground: 45 95% 97%;
+  --popover-border: 25 30% 28%;
+  --primary: 25 85% 65%;
+  --primary-foreground: 25 20% 12%;
+  --secondary: 45 95% 75%;
+  --secondary-foreground: 25 30% 12%;
+  --muted: 25 40% 35%;
+  --muted-foreground: 45 80% 60%;
+  --accent: 25 90% 68%;
+  --accent-foreground: 25 20% 12%;
+  --destructive: 350 80% 65%;
+  --destructive-foreground: 350 85% 12%;
+  --input: 25 40% 30%;
+  --ring: 25 85% 65%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  background-attachment: fixed;
+}
+
+/* Utility Colors for App Areas */
+.training-area {
+  @apply bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200;
+}
+
+.zoo-area {
+  @apply bg-gradient-to-br from-green-50 to-emerald-50 border-green-200;
+}
+
+.shop-area {
+  @apply bg-gradient-to-br from-orange-50 to-amber-50 border-orange-200;
+}
+
+.partners-area {
+  @apply bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200;
+}
+
+.goals-area {
+  @apply bg-gradient-to-br from-red-50 to-orange-50 border-red-200;
+}
+
+.training-btn {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold;
+}
+
+.zoo-btn {
+  @apply bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold;
+}
+
+.shop-btn {
+  @apply bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold;
+}
+
+.partners-btn {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold;
+}
+
+.goals-btn {
+  @apply bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold;
+}

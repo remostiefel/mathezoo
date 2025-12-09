@@ -1,0 +1,10 @@
+
+
+{
+  "scripts": {
+    "migrate": "drizzle-kit generate && drizzle-kit migrate",
+    "migrate-data": "tsx server/migrateToMatheZoo.ts",
+    "start": "NODE_ENV=production node dist/server/index.js",
+    "build": "vite build"
+  }
+}

@@ -1,0 +1,12 @@
+
+node_modules/
+dist/
+.env
+.DS_Store
+.check-cookies
+cookies.txt
+attached_assets/
+Brain/
+task.md
+client/dist/
+*.log
